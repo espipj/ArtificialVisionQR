@@ -1,36 +1,8 @@
-/**
- * Simple shape detector program.
- * It loads an image and tries to find simple shapes (rectangle, triangle, circle, etc) in it.
- * This program is a modified version of `squares.cpp` found in the OpenCV sample dir.
- *
- * https://opencv-code.com/tutorials/detecting-simple-shapes-in-an-image/
- */
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <cmath>
 #include <iostream>
 
-/**
- * Helper function to find a cosine of angle between vectors
- * from pt0->pt1 and pt0->pt2
- */
-
-void setLabel(cv::Mat& im, const std::string label, std::vector<cv::Point>& contour)
-{
-	int fontface = cv::FONT_HERSHEY_SIMPLEX;
-	double scale = 0.4;
-	int thickness = 1;
-	int baseline = 0;
-
-	cv::Size text = cv::getTextSize(label, fontface, scale, thickness, &baseline);
-	cv::Rect r = cv::boundingRect(contour);
-	
-	
-
-	cv::Point pt(r.x + ((r.width - text.width) / 2), r.y + ((r.height + text.height) / 2));
-	cv::rectangle(im, pt + cv::Point(0, baseline), pt + cv::Point(text.width, -text.height), CV_RGB(255,255,255), CV_FILLED);
-	cv::putText(im, label, pt, fontface, scale, CV_RGB(0,0,0), thickness, 8);
-}
 cv::Point calcularVerticeAbajoIzq(cv::Rect r){
 
 	return cv::Point(r.x+r.width,r.y+r.height);
