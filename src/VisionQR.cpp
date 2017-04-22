@@ -83,14 +83,14 @@ void imprimirResultados(std::vector<cv::Point>& contour, cv::Mat src){
 
 int main()
 {
-	//cv::Mat src = cv::imread("polygon.png");
-	//cv::Mat src = cv::imread("img1.png");
-	//cv::Mat src = cv::imread("centro.png");
-	//cv::Mat src = cv::imread("centro_peque.png");
-	cv::Mat src = cv::imread("derecha.png");
-	//cv::Mat src = cv::imread("derecha_peque.png");
-	//cv::Mat src = cv::imread("izquierda.png");
-	//cv::Mat src = cv::imread("izquierda_peque.png");
+	//cv::Mat src = cv::imread("../images/polygon.png");
+	//cv::Mat src = cv::imread("../images/img1.png");
+	//cv::Mat src = cv::imread("../images/centro.png");
+	//cv::Mat src = cv::imread("../images/centro_peque.png");
+	cv::Mat src = cv::imread("../images/derecha.png");
+	//cv::Mat src = cv::imread("../images/derecha_peque.png");
+	//cv::Mat src = cv::imread("../images/izquierda.png");
+	//cv::Mat src = cv::imread("../images/izquierda_peque.png");
 	
 	if (src.empty())
 		return -1;
