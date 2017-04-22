@@ -1,0 +1,1 @@
+VisionQR.d: VisionQR.cpp
