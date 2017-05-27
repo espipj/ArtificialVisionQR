@@ -2,7 +2,11 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <cmath>
 #include <iostream>
-
+/* Desarrollado por:
+	Mario Alcantara Garrote
+	Alex Hernandez Gonzalez
+	Pablo Espinosa Bermejo
+*/
 cv::Point calcularVerticeAbajoIzq(cv::Rect r){
 
 	return cv::Point(r.x+r.width,r.y+r.height);
